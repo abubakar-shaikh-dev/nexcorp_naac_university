@@ -1,0 +1,143 @@
+export default function profile_stepper_data() {
+  return [
+    {
+      id: 1,
+      name: "Step 1",
+      href: "/profile/basic-information",
+      status: "not-started",
+    },
+    {
+      id: 2,
+      name: "Step 2",
+      href: "/profile/for-communication",
+      status: "draft",
+    },
+    {
+      id: 3,
+      name: "Step 3",
+      href: "/profile/status-of-institution",
+      status: "rejected",
+    },
+    {
+      id: 4,
+      name: "Step 4",
+      href: "/profile/type-of-institution",
+      status: "submitted",
+    },
+    {
+      id: 5,
+      name: "Step 5",
+      href: "/profile/minority-recognition",
+      status: "approved",
+    },
+    {
+      id: 6,
+      name: "Step 6",
+      href: "/profile/source-of-funding",
+      status: "upcoming",
+    },
+    {
+      id: 7,
+      name: "Step 7",
+      href: "/profile/date-of-establishment-and-affiliation-details",
+      status: "upcoming",
+    },
+    {
+      id: 8,
+      name: "Step 8",
+      href: "/profile/details-of-ucg-recognition",
+      status: "upcoming",
+    },
+    {
+      id: 9,
+      name: "Step 9",
+      href: "/profile/details-of-recognition",
+      status: "upcoming",
+    },
+    {
+      id: 10,
+      name: "Step 10",
+      href: "/profile/affiliating-university-act-provide-for-conferment-of-autonomy",
+      status: "upcoming",
+    },
+    {
+      id: 11,
+      name: "Step 11",
+      href: "/profile/potential-for-excellence-recognition",
+      status: "upcoming",
+    },
+    {
+      id: 12,
+      name: "Step 12",
+      href: "/profile/location-of-the-campus-and-area",
+      status: "upcoming",
+    },
+    {
+      id: 13,
+      name: "Step 13",
+      href: "/profile/programmes-offered-by-college",
+      status: "upcoming",
+    },
+    {
+      id: 14,
+      name: "Step 14",
+      href: "/profile/self-financed-programmes-offered",
+      status: "upcoming",
+    },
+    {
+      id: 15,
+      name: "Step 15",
+      href: "/profile/list-of-departments",
+      status: "upcoming",
+    },
+    {
+      id: 16,
+      name: "Step 16",
+      href: "/profile/positions-in-the-institution",
+      status: "upcoming",
+    },
+    {
+      id: 17,
+      name: "Step 17",
+      href: "/profile/qualifications-of-the-teaching-staff",
+      status: "upcoming",
+    },
+    {
+      id: 18,
+      name: "Step 18",
+      href: "/profile/number-of-visiting-faculty",
+      status: "upcoming",
+    },
+    {
+      id: 19,
+      name: "Step 19",
+      href: "/profile/number-of-students-admitted",
+      status: "upcoming",
+    },
+    {
+      id: 20,
+      name: "Step 20",
+      href: "/profile/details-on-students-enrollment",
+      status: "upcoming",
+    },
+    { id: 21, name: "Step 21", href: "/profile/unit-cost", status: "upcoming" },
+    {
+      id: 22,
+      name: "Step 22",
+      href: "/profile/date-of-accreditation",
+      status: "upcoming",
+    },
+    {
+      id: 23,
+      name: "Step 23",
+      href: "/profile/date-of-establishment-of-internal-quality-assurance",
+      status: "upcoming",
+    },
+    {
+      id: 24,
+      name: "Step 24",
+      href: "/profile/details-regarding-submission-of-annual-quality-assurance-reports",
+      status: "upcoming",
+    },
+  ];
+}
