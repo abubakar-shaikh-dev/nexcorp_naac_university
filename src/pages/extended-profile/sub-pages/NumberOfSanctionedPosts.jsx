@@ -216,7 +216,7 @@ export default function NumberOfSanctionedPosts() {
             <span className="font-medium">Upload Data Template</span>
             <div className="flex gap-4 justify-start items-center">
                 <DocumentArrowDownIcon className="h-6 w-6"/>
-                <a href="./templates/Extended Profile 3.2 Template.xlsx" className="text-blue-500 underline" download>3.2 Template</a>
+                <a href="../templates/Extended Profile 3.2 Template.xlsx" className="text-blue-500 underline" download>3.2 Template</a>
             </div>
             <InputTag type='file' name='file-data' />
         </div>
