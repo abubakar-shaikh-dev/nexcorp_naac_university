@@ -1,17 +1,16 @@
 import * as React from "react";
-import {Box,Stack} from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import {
   FolderIcon,
   FolderOpenIcon,
   DocumentTextIcon,
-  ArrowPathIcon
 } from "@heroicons/react/24/outline";
 import { TreeView } from "@mui/x-tree-view/TreeView";
-import { TreeItem,treeItemClasses } from "@mui/x-tree-view/TreeItem";
+import { TreeItem, treeItemClasses } from "@mui/x-tree-view/TreeItem";
 import { styled } from "@mui/material/styles";
-import Metric_1_1_3 from "./sub-pages/Metric_1_1_3";
 
-//Sub Pages
+// Sub Pages
+const Metric_1_1_3 = React.lazy(() => import("./sub-pages/Metric_1_1_3"));
 
 
 const StyledTreeItem = styled(TreeItem)(({ rootnode }) => {
@@ -26,36 +25,34 @@ const StyledTreeItem = styled(TreeItem)(({ rootnode }) => {
       width: 19,
       left: -18,
       top: 12,
-      borderBottom:
-        // only display if the TreeItem is not root node
-        !rootnode ? `2px dashed ${borderColor}` : "none"
+      borderBottom: !rootnode ? `2px dashed ${borderColor}` : "none",
     },
     [`& .${treeItemClasses.group}`]: {
       marginLeft: 16,
       paddingLeft: 18,
-      borderLeft: `2px dashed ${borderColor}`
+      borderLeft: `2px dashed ${borderColor}`,
     },
     [`& .${treeItemClasses.content}`]: {
-      borderRadius:'5px'
+      borderRadius: "5px",
     },
     "& .MuiTreeItem-label": {
       fontSize: 16,
-    }
+    },
   };
 });
 
 const ShowTreeComponent = (props) => {
   const { children, activeTree, selectedTree } = props;
-  
-  return activeTree ?  (
+
+  return activeTree ? (
     <div hidden={activeTree[0] !== selectedTree}>
       <Box mx={2}>{children}</Box>
     </div>
-  ):null;
+  ) : null;
 };
 
 export default function FolderTreeSidebar(props) {
-  //Tree Structure Initialization
+  // Tree Structure Initialization
   const qif_quantitative_data = props.data;
 
   const [expanded, setExpanded] = React.useState([]);
@@ -84,11 +81,7 @@ export default function FolderTreeSidebar(props) {
 
   const handleExpandClick = () => {
     const arraySet = getNodeIdsWithChildren(qif_quantitative_data);
-    setExpanded((oldExpanded) =>
-      oldExpanded.length === 0
-        ? arraySet
-        : []
-    );
+    setExpanded((oldExpanded) => (oldExpanded.length === 0 ? arraySet : []));
   };
 
   const handleSelect = (event, selectedTree) => {
@@ -96,20 +89,11 @@ export default function FolderTreeSidebar(props) {
     !arraySet.includes(selectedTree[0]) && setActiveTree(selectedTree);
   };
 
-
   return (
     <>
-      
       <Box>
         <Stack spacing={3} direction="row">
-          <Box width="17%" sx={{position:'relative'}}>
-
-            {/* LOADER START */}
-            {/* <div className=" select-none flex cursor-wait justify-center items-center absolute bg-black/30 w-full h-full top-0 backdrop-blur-sm z-50 rounded-[5px]">
-              <ArrowPathIcon className="h-10 w-10 text-white font-semibold animate-spin cursor-wait" />
-            </div> */}
-            {/* LOADER END */}
-
+          <Box width="17%" sx={{ position: "relative" }}>
             <TreeView
               sx={{
                 p: 1,
@@ -130,10 +114,8 @@ export default function FolderTreeSidebar(props) {
               multiSelect
             >
               {qif_quantitative_data.map((folder, index) => (
-                <>
-
-                {folder.children ? (<StyledTreeItem
-                  rootnode='true'
+                <StyledTreeItem
+                  rootnode="true"
                   nodeId={folder.nodeId}
                   label={folder.label}
                   key={index}
@@ -153,33 +135,30 @@ export default function FolderTreeSidebar(props) {
                       ))}
                     </StyledTreeItem>
                   ))}
-                </StyledTreeItem>):(<StyledTreeItem
-                  rootnode='true'
-                  nodeId={folder.nodeId}
-                  label={folder.label}
-                  key={index}
-                ></StyledTreeItem>)}
-                
-                
-                </>
+                </StyledTreeItem>
               ))}
             </TreeView>
-            
+
             <Box sx={{ mt: 1 }}>
-              
-              
               <button
                 className="flex justify-center text-sm items-center bg-gray-800 hover:bg-gray-900 hover:shadow-lg focus:bg-black text-white px-5 py-2 w-full rounded-md transition-all duration-150"
                 onClick={handleExpandClick}
               >
-                <span>{expanded.length === 0 ? "Expand all" : "Collapse all"}</span>
+                <span>
+                  {expanded.length === 0 ? "Expand all" : "Collapse all"}
+                </span>
               </button>
             </Box>
           </Box>
-          <Box width={'83%'}>
-          <Metric_1_1_3 />
+          <Box width="82%">
+            <React.Suspense fallback={<div className="w-full flex justify-center mt-16">
+              <span className="text-lg">Please Wait...</span>
+            </div>}>
+              <ShowTreeComponent activeTree={activeTree} selectedTree="3">
+                <Metric_1_1_3 />
+              </ShowTreeComponent>
+            </React.Suspense>
           </Box>
-          
         </Stack>
       </Box>
     </>
