@@ -101,7 +101,7 @@ export default function FolderTreeSidebar(props) {
       
       <Box>
         <Stack spacing={3} direction="row">
-          <Box width="16%" sx={{position:'relative'}}>
+          <Box width="17%" sx={{position:'relative'}}>
 
             {/* LOADER START */}
             {/* <div className=" select-none flex cursor-wait justify-center items-center absolute bg-black/30 w-full h-full top-0 backdrop-blur-sm z-50 rounded-[5px]">
