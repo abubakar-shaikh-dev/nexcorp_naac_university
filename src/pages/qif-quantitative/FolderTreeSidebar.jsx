@@ -9,6 +9,7 @@ import {
 import { TreeView } from "@mui/x-tree-view/TreeView";
 import { TreeItem,treeItemClasses } from "@mui/x-tree-view/TreeItem";
 import { styled } from "@mui/material/styles";
+import Metric_1_1_3 from "./sub-pages/Metric_1_1_3";
 
 //Sub Pages
 
@@ -166,6 +167,7 @@ export default function FolderTreeSidebar(props) {
             
             <Box sx={{ mt: 1 }}>
               
+              
               <button
                 className="flex justify-center text-sm items-center bg-gray-800 hover:bg-gray-900 hover:shadow-lg focus:bg-black text-white px-5 py-2 w-full rounded-md transition-all duration-150"
                 onClick={handleExpandClick}
@@ -173,6 +175,9 @@ export default function FolderTreeSidebar(props) {
                 <span>{expanded.length === 0 ? "Expand all" : "Collapse all"}</span>
               </button>
             </Box>
+          </Box>
+          <Box width={'83%'}>
+          <Metric_1_1_3 />
           </Box>
           
         </Stack>
