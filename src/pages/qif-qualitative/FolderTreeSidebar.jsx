@@ -8,7 +8,6 @@ import {
 import { TreeView } from "@mui/x-tree-view/TreeView";
 import { TreeItem, treeItemClasses } from "@mui/x-tree-view/TreeItem";
 import { styled } from "@mui/material/styles";
-import SpinnerSVG from "../../components/SpinnerSVG";
 
 // Sub Pages
 const Metric_1_1_1 = React.lazy(() => import("./sub-pages/Metric_1_1_1"));
