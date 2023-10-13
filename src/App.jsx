@@ -4,6 +4,7 @@ import "./custom.css"
 // Pages
 import ExecutiveSummary from "./pages/executive-summary/ExecutiveSummary";
 import QifQualitative from "./pages/qif-qualitative/QifQualitative";
+import QifQuantitative from "./pages/qif-quantitative/QifQuantitative";
 
 //Routes
 import ProfileRoutes from "./routes/ProfileRoutes";
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/nep-parameters/*" element={<NepParametersRoutes />} />
           <Route path="/extended-profile/*" element={<ExtendedProfileRoutes />} />
           <Route path="/qif-qualitative" element={<QifQualitative />} />
+          <Route path="/qif-quantitative" element={<QifQuantitative />} />
         </Routes>
       </BrowserRouter>
     </>
