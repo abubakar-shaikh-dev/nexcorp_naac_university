@@ -1,7 +1,7 @@
 import React from "react";
 import SelectTag from "../../../components/SelectTag";
 import InputTag from "../../../components/InputTag";
-import { ArrowRightIcon, ArrowDownTrayIcon } from "@heroicons/react/24/outline";
+import { ArrowRightIcon, ArrowDownTrayIcon,DocumentArrowDownIcon } from "@heroicons/react/24/outline";
 
 export default function Metric_1_1_3() {
   return (
@@ -84,6 +84,46 @@ export default function Metric_1_1_3() {
                 <span>Rejected</span>
               </div>
             </div>
+
+            <div className="my-2">
+                <span className="font-semibold">Metric Data</span>
+              <div className=" py-3 flex gap-4 flex-col sm:w-1/2 md:w-1/3">
+                <span className="font-semibold">Data Template</span>
+                <div className="flex gap-4 justify-start items-center">
+                  <DocumentArrowDownIcon className="h-6 w-6" />
+                  <a
+                    href="./templates/1.1.3 Template.xlsx"
+                    className="text-blue-500 underline"
+                    download
+                  >
+                    1.1.3 Template
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <span className="font-semibold">
+                Supporting Files of Commerce Department
+              </span>
+
+              <div className="flex flex-col my-2 text-sm">
+                <div className="flex flex-row">
+                  <div className="p-6 w-1/2 border border-gray-400 rounded-tl-md">
+                    Details of participation of teachers in various
+                    bodies/activities provided as a response to the metric
+                  </div>
+                  <div className="p-6 w-1/2 border border-gray-400 rounded-tr-md"></div>
+                </div>
+
+                <div className="flex flex-row">
+                  <div className="p-6 w-1/2 border border-gray-400 rounded-bl-md">
+                    Any additional information
+                  </div>
+                  <div className="p-6 w-1/2 border border-gray-400 rounded-br-md"></div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="flex flex-col gap-3 mt-8">
@@ -93,8 +133,7 @@ export default function Metric_1_1_3() {
 
             {/* CHECKBOX STARTS */}
             <fieldset className="space-y-5 pl-6">
-
-            <div className="select-none  relative flex items-start">
+              <div className="select-none  relative flex items-start">
                 <div className="flex h-5 items-center">
                   <input
                     id="checkbox1"
@@ -149,7 +188,8 @@ export default function Metric_1_1_3() {
                     htmlFor="checkbox3"
                     className="font-base cursor-pointer text-gray-700"
                   >
-                    Design and Development of Curriculam for Add on / Certificate / Diploma Courses
+                    Design and Development of Curriculam for Add on /
+                    Certificate / Diploma Courses
                   </label>
                 </div>
               </div>
@@ -169,23 +209,39 @@ export default function Metric_1_1_3() {
                     htmlFor="checkbox4"
                     className="font-base cursor-pointer text-gray-700"
                   >
-                    Assessment / Evaluation Process of the Affiliating University.
+                    Assessment / Evaluation Process of the Affiliating
+                    University.
                   </label>
                 </div>
               </div>
-
-              
-              
             </fieldset>
-              {/* CHECKBOX ENDS */}
+            {/* CHECKBOX ENDS */}
 
-              <span className=" pl-4 mt-2">Data requirement: (As per Data Template):</span>
-              <ul className="list-decimal text-sm text-gray-700 space-y-5 pl-10">
-                <li>Number of teachers participated</li>
-                <li>Name of the body in which full time teacher participated</li>
-                <li>Total number of teachers</li>
-              </ul>
+            <span className=" pl-4 mt-2">
+              Data requirement: (As per Data Template):
+            </span>
+            <ul className="list-decimal text-sm text-gray-700 space-y-5 pl-10">
+              <li>Number of teachers participated</li>
+              <li>Name of the body in which full time teacher participated</li>
+              <li>Total number of teachers</li>
+            </ul>
 
+            <div className="mt-2 pl-4">
+              <div className=" py-3 flex gap-4 flex-col sm:w-1/2 md:w-1/3">
+                <span className="font-base">Upload Data Template</span>
+                <div className="flex gap-4 justify-start items-center">
+                  <DocumentArrowDownIcon className="h-6 w-6" />
+                  <a
+                    href="./templates/1.1.3 Template.xlsx"
+                    className="text-blue-500 underline"
+                    download
+                  >
+                    1.1.3 Template
+                  </a>
+                </div>
+                <InputTag type="file" name="file-data" />
+              </div>
+            </div>
           </div>
 
           <div className="flex flex-col gap-3 mt-8">
@@ -198,7 +254,10 @@ export default function Metric_1_1_3() {
             <div className="flex flex-col my-2 ">
               <div className="flex flex-row">
                 <div className="flex justify-between items-center p-6 w-[66.66%] border border-gray-400 rounded-tl-md">
-                  <span>Upload Additional information</span>
+                  <span className="text-sm w-[66.6%]">
+                    Details of participation of teachers in various
+                    bodies/activities provided as a response to the metric
+                  </span>
                   <button className="bg-indigo-500 text-sm hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-900 text-white px-5 py-2 rounded-md transition-all duration-150">
                     Merge PDF Files
                   </button>
@@ -210,7 +269,7 @@ export default function Metric_1_1_3() {
 
               <div className="flex flex-row">
                 <div className="flex justify-between items-center p-6 w-[66.66%] border border-gray-400 rounded-bl-md">
-                  <span>Link for Additional information</span>
+                  <span className="text-sm">Any additional information</span>
                   <button className="bg-indigo-500 text-sm hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-900 text-white px-5 py-2 rounded-md transition-all duration-150">
                     Merge PDF Files
                   </button>
