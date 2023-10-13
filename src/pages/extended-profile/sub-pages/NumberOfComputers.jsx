@@ -29,7 +29,7 @@ export default function NumberOfComputers() {
             <span className="font-medium">Upload Data Template</span>
             <div className="flex gap-4 justify-start items-center">
                 <DocumentArrowDownIcon className="h-6 w-6"/>
-                <a href="./templates/Extended Profile - 4-3 Template.xlsx" className="text-blue-500 underline" download>4.3 Template</a>
+                <a href="./templates/Extended Profile-4-3-Template.xlsx" className="text-blue-500 underline" download>4.3 Template</a>
             </div>
             <InputTag type='file' name='file-data' />
         </div>
