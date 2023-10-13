@@ -2,6 +2,7 @@ import React from "react";
 
 //Components
 import Navigation from "../../components/partials/Navigation";
+import TabNavigation from "../../components/TabNavigation";
 import Stepper from "../../components/Stepper";
 import StatusBadges from "../../components/StatusBadges"
 import extended_profile_stepper_data from "./extended-profile-stepper-data";
@@ -9,7 +10,8 @@ import extended_profile_stepper_data from "./extended-profile-stepper-data";
 export default function ExtendedProfile({ children }) {
   return (
     <>
-      <Navigation>
+      <Navigation />
+      <TabNavigation />
         <div className="shadow-xl p-5 my-10 mx-5 bg-white ">
           <div className="flex flex-col gap-4">
           <div className="flex justify-between flex-col items-start md:flex-row md:items-center">
@@ -33,7 +35,6 @@ export default function ExtendedProfile({ children }) {
 
           </div>
         </div>
-      </Navigation>
     </>
   );
 }

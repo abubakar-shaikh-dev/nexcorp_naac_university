@@ -1,7 +1,6 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import TabNavigation from "../TabNavigation"
 import { Link, Navigate } from 'react-router-dom'
 
 const navigation = [
@@ -12,7 +11,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example({children}) {
+export default function Navigation() {
   return (
     <>
     <Disclosure as="nav" className="bg-gray-800">
@@ -142,7 +141,6 @@ export default function Example({children}) {
         </>
       )}
     </Disclosure>
-    <TabNavigation children={children} />
     
     </>
   )

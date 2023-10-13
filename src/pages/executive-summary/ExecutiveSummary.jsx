@@ -1,5 +1,6 @@
 import React from "react";
 import Navigation from "../../components/partials/Navigation";
+import TabNavigation from "../../components/TabNavigation";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
@@ -8,7 +9,9 @@ import StatusBadges from "../../components/StatusBadges";
 
 export default function ExecutiveSummary() {
   return (
-    <Navigation>
+    <>
+    <Navigation />
+    <TabNavigation />
       <div className="shadow-xl p-5 my-10 mx-5 bg-white">
         <div className="flex flex-col gap-4">
           <div className="flex justify-between flex-col items-start md:flex-row md:items-center">
@@ -109,7 +112,6 @@ export default function ExecutiveSummary() {
           </div>
         </div>
       </div>
-      
-    </Navigation>
+      </>
   );
 }

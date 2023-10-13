@@ -10,7 +10,7 @@ const tabs = [
   { name: "QIF Quantitative", route: "/qif-quantitative" },
 ];
 
-function TabNavigation({ children }) {
+function TabNavigation() {
   const location = useLocation();
   const getCurrentPathname = () => {
     return location.pathname;
@@ -52,8 +52,6 @@ function TabNavigation({ children }) {
           </div>
         </div>
       </div>
-
-      {children}
     </>
   );
 }
