@@ -89,7 +89,7 @@ export default function Metric_1_1_3() {
                 <span className="font-semibold">Metric Data</span>
               <div className=" py-3 flex gap-4 flex-col sm:w-1/2 md:w-1/3">
                 <span className="font-semibold">Data Template</span>
-                <div className="flex gap-4 justify-start items-center">
+                <div className="flex text-sm gap-4 justify-start items-center">
                   <DocumentArrowDownIcon className="h-6 w-6" />
                   <a
                     href="./templates/1.1.3 Template.xlsx"
@@ -229,7 +229,7 @@ export default function Metric_1_1_3() {
             <div className="mt-2 pl-4">
               <div className=" py-3 flex gap-4 flex-col sm:w-1/2 md:w-1/3">
                 <span className="font-base">Upload Data Template</span>
-                <div className="flex gap-4 justify-start items-center">
+                <div className="flex gap-4 text-sm justify-start items-center">
                   <DocumentArrowDownIcon className="h-6 w-6" />
                   <a
                     href="./templates/1.1.3 Template.xlsx"
