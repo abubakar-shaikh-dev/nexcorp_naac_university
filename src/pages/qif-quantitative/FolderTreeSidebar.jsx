@@ -12,6 +12,7 @@ import { styled } from "@mui/material/styles";
 // Sub Pages
 const Metric_1_1_3 = React.lazy(() => import("./sub-pages/Metric_1_1_3"));
 const Metric_1_2_1 = React.lazy(() => import("./sub-pages/Metric_1_2_1"));
+const Metric_1_2_2 = React.lazy(() => import("./sub-pages/Metric_1_2_2"));
 
 
 const StyledTreeItem = styled(TreeItem)(({ rootnode }) => {
@@ -160,6 +161,9 @@ export default function FolderTreeSidebar(props) {
               </ShowTreeComponent>
               <ShowTreeComponent activeTree={activeTree} selectedTree="5">
                 <Metric_1_2_1 />
+              </ShowTreeComponent>
+              <ShowTreeComponent activeTree={activeTree} selectedTree="6">
+                <Metric_1_2_2 />
               </ShowTreeComponent>
             </React.Suspense>
           </Box>
