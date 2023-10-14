@@ -7,19 +7,19 @@ import {
   DocumentArrowDownIcon,
 } from "@heroicons/react/24/outline";
 
-export default function Metric_2_3_3() {
+export default function Metric_2_4_3() {
   return (
     <>
       <section className="flex flex-col gap-5">
         <div className="flex justify-between">
-          <span className="font-semibold text-lg">Metric 2.3.3</span>
+          <span className="font-semibold text-lg">Metric 2.4.3</span>
           <div className="flex justify-center items-center text-white w-28 text-center bg-gray-400 px-4 py-1 shadow-sm text-xs rounded-2xl">
             <span>Not Started</span>
           </div>
         </div>
 
         <div className="flex justify-between items-start">
-          <span className="text-sm">Weightage : 15</span>
+          <span className="text-sm">Weightage : 20</span>
           <div className="flex flex-col gap-3 justify-between items-end">
             <div className=" flex justify-center items-center gap-3 text-sm text-blue-500 hover:underline cursor-pointer">
               <ArrowDownTrayIcon className="h-4 w-4" />
@@ -33,7 +33,9 @@ export default function Metric_2_3_3() {
         </div>
 
         <span>
-        Ratio of mentor to students for academic and other related issues (Data for the latest completed academic year )
+          Average teaching experience of full time teachers in the same
+          institution (Data for the latest completed academic year in number of
+          years)
         </span>
 
         {/* <span className="text-red-500 text-sm">
@@ -76,38 +78,55 @@ export default function Metric_2_3_3() {
             </div>
 
             <div className="my-2">
-              <span className="font-semibold">Metric Data</span>
+              <span
+                Total
+                experience
+                of
+                full-time
+                teachers
+                className="font-semibold"
+              >
+                Metric Data
+              </span>
               <table className="w-full border border-gray-400 rounded-lg">
-  <tbody>
-    <tr className="text-sm">
-      <td className="p-4 border border-gray-400 ">
-      2.3.3.1: Number of mentors
-      </td>
-      <td className="p-4 border border-gray-400">
-        <InputTag name='response1' placeholder="Response" disabled/>
-      </td>
-    </tr>
-    <tr className="text-sm">
-      <td className="p-4 border border-gray-400">
-      Number of students assigned to each Mentor
-      </td>
-      <td className="p-4 border border-gray-400 ">
-        <InputTag name='response2' placeholder="Response" disabled/>
-      </td>
-    </tr>
-  </tbody>
-</table>
+                <tbody>
+                  <tr className="text-sm">
+                    <td className="p-4 border border-gray-400 ">
+                      2.4.3.1: Total experience of full-time teachers
+                    </td>
+                    <td className="p-4 border border-gray-400">
+                      <InputTag
+                        name="response1"
+                        placeholder="Response"
+                        disabled
+                      />
+                    </td>
+                  </tr>
+                  <tr className="text-sm">
+                    <td className="p-4 border border-gray-400">
+                      Number of full time teachers
+                    </td>
+                    <td className="p-4 border border-gray-400 ">
+                      <InputTag
+                        name="response2"
+                        placeholder="Response"
+                        disabled
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
 
               <div className=" py-3 flex gap-4 flex-col sm:w-1/2 md:w-1/3">
                 <span className="font-semibold">Data Template</span>
                 <div className="flex text-sm gap-4 justify-start items-center">
                   <DocumentArrowDownIcon className="h-6 w-6" />
                   <a
-                    href="./templates/2.3.3 Template.xlsx"
+                    href="./templates/2.4.3 Template.xlsx"
                     className="text-blue-500 underline"
                     download
                   >
-                    2.3.3 Template
+                    2.4.3 Template
                   </a>
                 </div>
               </div>
@@ -121,26 +140,10 @@ export default function Metric_2_3_3() {
               <div className="flex flex-col my-2 text-sm">
                 <div className="flex flex-row">
                   <div className="p-6 w-1/2 border border-gray-400 ">
-                  Upload year wise, number of students enrolled and full time teachers on roll.
+                    Any additional information
                   </div>
                   <div className="p-6 w-1/2 border border-gray-400 "></div>
                 </div>
-
-                <div className="flex flex-row">
-                  <div className="p-6 w-1/2 border border-gray-400 ">
-                  Circulars pertaining to assigning mentors to mentees
-                  </div>
-                  <div className="p-6 w-1/2 border border-gray-400 "></div>
-                </div>
-
-                <div className="flex flex-row">
-                  <div className="p-6 w-1/2 border border-gray-400 ">
-                  mentor/mentee ratio
-                  </div>
-                  <div className="p-6 w-1/2 border border-gray-400 "></div>
-                </div>
-
-                
               </div>
             </div>
           </div>
@@ -153,7 +156,7 @@ export default function Metric_2_3_3() {
               <tbody>
                 <tr className="text-sm">
                   <td className="p-4 border border-gray-400">
-                  2.3.3.1: Number of mentors
+                    2.4.3.1: Total experience of full-time teachers
                   </td>
                   <td className="p-4 border border-gray-400">
                     <InputTag name="response1" placeholder="Response" />
@@ -161,7 +164,7 @@ export default function Metric_2_3_3() {
                 </tr>
                 <tr className="text-sm">
                   <td className="p-4 border border-gray-400">
-                  Number of students assigned to each Mentor
+                    Number of full time teachers
                   </td>
                   <td className="p-4 border border-gray-400">
                     <InputTag name="response2" placeholder="Response" />
@@ -170,7 +173,15 @@ export default function Metric_2_3_3() {
               </tbody>
             </table>
 
-           
+            <span className=" mt-2">
+              Data Requirement for last five years (As per Data Template)
+            </span>
+            <ul className="list-decimal text-sm text-gray-700 space-y-5 pl-6">
+              <li>
+                Name and Number of full time teachers with years of teaching
+                experiences
+              </li>
+            </ul>
 
             <div className="mt-2">
               <div className=" py-3 flex gap-4 flex-col sm:w-1/2 md:w-1/3">
@@ -178,11 +189,11 @@ export default function Metric_2_3_3() {
                 <div className="flex text-sm gap-4 justify-start items-center">
                   <DocumentArrowDownIcon className="h-6 w-6" />
                   <a
-                    href="./templates/2.3.3 Template.xlsx"
+                    href="./templates/2.4.3 Template.xlsx"
                     className="text-blue-500 underline"
                     download
                   >
-                    2.3.3 Template
+                    2.4.3 Template
                   </a>
                 </div>
                 <InputTag type="file" name="file-data" />
@@ -198,11 +209,11 @@ export default function Metric_2_3_3() {
             </span>
 
             <div className="flex flex-col my-2 ">
-              
-
               <div className="flex flex-row">
                 <div className="flex justify-between items-center p-6 w-[66.66%] border border-gray-400 ">
-                  <span className="text-sm w-[66.66%]">Upload year wise, number of students enrolled and full time teachers on roll.</span>
+                  <span className="text-sm w-[66.66%]">
+                    Any additional information
+                  </span>
                   <button className="bg-indigo-500 text-sm hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-900 text-white px-5 py-2 rounded-md transition-all duration-150">
                     Merge PDF Files
                   </button>
@@ -211,32 +222,6 @@ export default function Metric_2_3_3() {
                   <InputTag type="file" name="file2" />
                 </div>
               </div>
-
-              <div className="flex flex-row">
-                <div className="flex justify-between items-center p-6 w-[66.66%] border border-gray-400 ">
-                  <span className="text-sm">Circulars pertaining to assigning mentors to mentees</span>
-                  <button className="bg-indigo-500 text-sm hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-900 text-white px-5 py-2 rounded-md transition-all duration-150">
-                    Merge PDF Files
-                  </button>
-                </div>
-                <div className="p-6 w-1/3 border border-gray-400 ">
-                  <InputTag type="file" name="file2" />
-                </div>
-              </div>
-
-              <div className="flex flex-row">
-                <div className="flex justify-between items-center p-6 w-[66.66%] border border-gray-400 ">
-                  <span className="text-sm">mentor/mentee ratio</span>
-                  <button className="bg-indigo-500 text-sm hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-900 text-white px-5 py-2 rounded-md transition-all duration-150">
-                    Merge PDF Files
-                  </button>
-                </div>
-                <div className="p-6 w-1/3 border border-gray-400 ">
-                  <InputTag type="file" name="file2" />
-                </div>
-              </div>
-
-
             </div>
           </div>
 
