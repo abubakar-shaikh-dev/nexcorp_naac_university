@@ -117,8 +117,7 @@ export default function Metric_1_4_2() {
 
                 <div className="flex flex-row">
                   <div className="p-6 w-1/2 border border-gray-400 rounded-bl-md">
-                  URL for feedback reporterning Council, Syndicate,
-                    Board of Management (Upload)
+                  URL for feedback report
                   </div>
                   <div className="p-6 w-1/2 border border-gray-400 rounded-br-md"></div>
                 </div>
