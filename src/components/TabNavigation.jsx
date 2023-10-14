@@ -30,7 +30,7 @@ function TabNavigation() {
 
   return (
     <>
-      <div className="border-b border-gray-200 bg-white py-5 px-5 sm:pb-0">
+      <div className="select-none border-b border-gray-200 bg-white py-5 px-5 sm:pb-0">
         <div className="mt-3 sm:mt-4">
           <div className="block overflow-scroll overflow-y-hidden md:overflow-x-auto">
             <nav className="-mb-px flex space-x-8">
