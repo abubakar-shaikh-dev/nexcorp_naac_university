@@ -33,8 +33,7 @@ export default function Metric_1_4_2() {
         </div>
 
         <span>
-          Institution obtains feedback on the syllabus and its transaction at
-          the institution from the following stakeholders
+        Feedback process of the Institution may be classified as follows:
           <ul className="pl-6 list-decimal text-sm text-gray-700 space-y-5 mt-5">
             <li>
               Feedback collected, analysed and action taken and feedback
