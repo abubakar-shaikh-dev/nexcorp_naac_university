@@ -153,7 +153,7 @@ export default function FolderTreeSidebar(props) {
           </Box>
           <Box width="82%">
             <React.Suspense fallback={<div className="w-full flex justify-center mt-16">
-              <span className="text-lg">Please Wait...</span>
+            <img src="./assets/loader.gif" alt="loader" />
             </div>}>
               <ShowTreeComponent activeTree={activeTree} selectedTree="3">
                 <Metric_1_1_3 />
