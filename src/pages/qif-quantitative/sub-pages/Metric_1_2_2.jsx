@@ -302,7 +302,7 @@ export default function Metric_1_2_2() {
 
               <div className="flex flex-row">
                 <div className="flex justify-between items-center p-6 w-[66.66%] border border-gray-400 ">
-                  <span className="text-sm">
+                  <span className="text-sm w-[66.66%]">
                   Brochure or any other document relating to Add on /Certificate programs
                   </span>
                   <button className="bg-indigo-500 text-sm hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-900 text-white px-5 py-2 rounded-md transition-all duration-150">
