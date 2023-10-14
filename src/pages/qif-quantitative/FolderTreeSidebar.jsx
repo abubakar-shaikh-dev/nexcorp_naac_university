@@ -8,10 +8,10 @@ import {
 import { TreeView } from "@mui/x-tree-view/TreeView";
 import { TreeItem, treeItemClasses } from "@mui/x-tree-view/TreeItem";
 import { styled } from "@mui/material/styles";
-import Metric_1_2_1 from "./sub-pages/Metric_1_2_1";
 
 // Sub Pages
 const Metric_1_1_3 = React.lazy(() => import("./sub-pages/Metric_1_1_3"));
+const Metric_1_2_1 = React.lazy(() => import("./sub-pages/Metric_1_2_1"));
 
 
 const StyledTreeItem = styled(TreeItem)(({ rootnode }) => {
