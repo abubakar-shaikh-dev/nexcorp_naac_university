@@ -12,7 +12,7 @@ export default function Metric_4_3_3() {
     <>
       <section className="flex flex-col gap-5">
         <div className="flex justify-between">
-          <span className="font-semibold text-lg">Metric 4_3_3</span>
+          <span className="font-semibold text-lg">Metric 4.3.3</span>
           <div className="flex justify-center items-center text-white w-28 text-center bg-gray-400 px-4 py-1 shadow-sm text-xs rounded-2xl">
             <span>Not Started</span>
           </div>
