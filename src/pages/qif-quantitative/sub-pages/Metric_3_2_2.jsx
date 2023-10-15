@@ -33,7 +33,7 @@ export default function Metric_3_2_2() {
         </div>
 
         <span>
-        Grants received from Government and non-governmental agencies for research projects / endowments in the institution during the last five years (INR in Lakhs)
+        Number of workshops/seminars conducted on Research Methodology, Intellectual Property Rights (IPR) and entrepreneurship during the last five years
         </span>
 
         {/* <span className="text-red-500 text-sm">
@@ -120,7 +120,7 @@ export default function Metric_3_2_2() {
 
                 <tr className="text-sm">
                   <td className="p-4 border border-gray-400">
-                  3.1.3.1: Number of departments having Research projects funded by government and non-government agencies during the last five years
+                  3.2.2.1: Total number of workshops/seminars conducted on Research Methodology, Intellectual Property Rights (IPR) and entrepreneurship year wise during last five years
                   </td>
                   <td className="p-4 border border-gray-400">
                     <InputTag name="response2" placeholder="Response" disabled/>
@@ -139,26 +139,7 @@ export default function Metric_3_2_2() {
                   </td>
                 </tr>
 
-                <tr className="text-sm">
-                  <td className="p-4 border border-gray-400">
-                  Total number of departments
-                  </td>
-                  <td className="p-4 border border-gray-400">
-                    <InputTag name="response2" placeholder="Response" disabled/>
-                  </td>
-                  <td className="p-4 border border-gray-400">
-                    <InputTag name="response2" placeholder="Response" disabled/>
-                  </td>
-                  <td className="p-4 border border-gray-400">
-                    <InputTag name="response2" placeholder="Response" disabled/>
-                  </td>
-                  <td className="p-4 border border-gray-400">
-                    <InputTag name="response2" placeholder="Response" disabled/>
-                  </td>
-                  <td className="p-4 border border-gray-400">
-                    <InputTag name="response2" placeholder="Response" disabled/>
-                  </td>
-                </tr>
+                
 
               </tbody>
             </table>
@@ -168,11 +149,11 @@ export default function Metric_3_2_2() {
                 <div className="flex text-sm gap-4 justify-start items-center">
                   <DocumentArrowDownIcon className="h-6 w-6" />
                   <a
-                    href="./templates/3.1.3 Template.xlsx"
+                    href="./templates/3.2.2 Template.xlsx"
                     className="text-blue-500 underline"
                     download
                   >
-                    3.1.3 Template
+                    3.2.2 Template
                   </a>
                 </div>
               </div>
@@ -186,24 +167,19 @@ export default function Metric_3_2_2() {
               <div className="flex flex-col my-2 text-sm">
                 <div className="flex flex-row">
                   <div className="p-6 w-1/2 border border-gray-400 ">
+                  Report of the event
+                  </div>
+                  <div className="p-6 w-1/2 border border-gray-400 "></div>
+                </div>
+
+                <div className="flex flex-row">
+                  <div className="p-6 w-1/2 border border-gray-400 ">
                   Any additional information
                   </div>
                   <div className="p-6 w-1/2 border border-gray-400 "></div>
                 </div>
 
-                <div className="flex flex-row">
-                  <div className="p-6 w-1/2 border border-gray-400 ">
-                  Supporting document from Funding Agency
-                  </div>
-                  <div className="p-6 w-1/2 border border-gray-400 "></div>
-                </div>
-
-                <div className="flex flex-row">
-                  <div className="p-6 w-1/2 border border-gray-400 ">
-                  Paste link to funding agency website
-                  </div>
-                  <div className="p-6 w-1/2 border border-gray-400 "></div>
-                </div>
+                
 
 
               </div>
@@ -255,7 +231,7 @@ export default function Metric_3_2_2() {
                 </tr>
                 <tr className="text-sm">
                   <td className="p-4 border border-gray-400">
-                  3.1.3.1: Number of departments having Research projects funded by government and non-government agencies during the last five years
+                  3.2.2.1: Total number of workshops/seminars conducted on Research Methodology, Intellectual Property Rights (IPR) and entrepreneurship year wise during last five years
                   </td>
                   <td className="p-4 border border-gray-400">
                     <InputTag name="response2" placeholder="Response" />
@@ -273,41 +249,23 @@ export default function Metric_3_2_2() {
                     <InputTag name="response2" placeholder="Response" />
                   </td>
                 </tr>
-                <tr className="text-sm">
-                  <td className="p-4 border border-gray-400">
-                  Total number of departments
-                  </td>
-                  <td className="p-4 border border-gray-400">
-                    <InputTag name="response2" placeholder="Response" />
-                  </td>
-                  <td className="p-4 border border-gray-400">
-                    <InputTag name="response2" placeholder="Response" />
-                  </td>
-                  <td className="p-4 border border-gray-400">
-                    <InputTag name="response2" placeholder="Response" />
-                  </td>
-                  <td className="p-4 border border-gray-400">
-                    <InputTag name="response2" placeholder="Response" />
-                  </td>
-                  <td className="p-4 border border-gray-400">
-                    <InputTag name="response2" placeholder="Response" />
-                  </td>
-                </tr>
+                
               </tbody>
             </table>
 
+            <span className=" mt-2">
+              Provide percentage attainment for this metric.
+            </span>
+            <InputTag name="percentage-attainment-metric" placeholder="Response" type="number" min="0" max="100" />
            
             <span className=" mt-2">
-            Data Requirements: (As per Data Template)
+            Data Requirement: (As per Data Template)
             </span>
             <ul className="list-decimal text-sm text-gray-700 space-y-5 pl-6">
-              <li>Name of Principal Investigator</li>
-              <li>Duration of project</li>
-              <li>Name of the research project</li>
-              <li>Amount / Fund received</li>
-              <li>Name of funding agency</li>
-              <li>Year of sanction</li>
-              <li>Department of recipient</li>
+              <li>Name of the workshops / seminars</li>
+              <li>Number of Participants</li>
+              <li>Date (From -to)</li>
+              <li>Link to the activity report on the website</li>
             </ul>
 
             <div className="mt-2">
@@ -316,11 +274,11 @@ export default function Metric_3_2_2() {
                 <div className="flex text-sm gap-4 justify-start items-center">
                   <DocumentArrowDownIcon className="h-6 w-6" />
                   <a
-                    href="./templates/3.1.3 Template.xlsx"
+                    href="./templates/3.2.2 Template.xlsx"
                     className="text-blue-500 underline"
                     download
                   >
-                    3.1.3 Template
+                    3.2.2 Template
                   </a>
                 </div>
                 <InputTag type="file" name="file-data" />
@@ -339,7 +297,7 @@ export default function Metric_3_2_2() {
               <div className="flex flex-row">
                 <div className="flex justify-between items-center p-6 w-[66.66%] border border-gray-400 ">
                   <span className="text-sm w-[66.6%]">
-                  Any additional information
+                  Report of the event
                   </span>
                   <button className="bg-indigo-500 text-sm hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-900 text-white px-5 py-2 rounded-md transition-all duration-150">
                     Merge PDF Files
@@ -353,7 +311,7 @@ export default function Metric_3_2_2() {
               <div className="flex flex-row">
                 <div className="flex justify-between items-center p-6 w-[66.66%] border border-gray-400 ">
                   <span className="text-sm w-[66.66%]">
-                  Supporting document from Funding Agency
+                  Any additional information
                   </span>
                   <button className="bg-indigo-500 text-sm hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-900 text-white px-5 py-2 rounded-md transition-all duration-150">
                     Merge PDF Files
@@ -364,19 +322,7 @@ export default function Metric_3_2_2() {
                 </div>
               </div>
 
-              <div className="flex flex-row">
-                <div className="flex justify-between items-center p-6 w-[66.66%] border border-gray-400 ">
-                  <span className="text-sm w-[66.66%]">
-                  Paste link to funding agency website
-                  </span>
-                  <button className="bg-indigo-500 text-sm hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-900 text-white px-5 py-2 rounded-md transition-all duration-150">
-                    Merge PDF Files
-                  </button>
-                </div>
-                <div className="p-6 w-1/3 border border-gray-400 ">
-                  <InputTag type="file" name="file2" />
-                </div>
-              </div>
+              
 
             </div>
           </div>
