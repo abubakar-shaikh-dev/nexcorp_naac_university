@@ -139,7 +139,7 @@ export default function Metric_3_5_1() {
 
                   <tr className="text-sm">
                     <td className="p-4 border border-gray-400">
-                    Number of Collaborative activities for research, Faculty exchange, Student exchange/ internship per year
+                    3.5.1.1:Number of Collaborative activities for research, Faculty exchange, Student exchange/ internship year wise during the last five years
                     </td>
                     <td className="p-4 border border-gray-400">
                       <InputTag
