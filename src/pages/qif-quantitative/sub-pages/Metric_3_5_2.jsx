@@ -7,12 +7,12 @@ import {
   DocumentArrowDownIcon,
 } from "@heroicons/react/24/outline";
 
-export default function Metric_3_5_1() {
+export default function Metric_3_5_2() {
   return (
     <>
       <section className="flex flex-col gap-5">
         <div className="flex justify-between">
-          <span className="font-semibold text-lg">Metric 3.5.1</span>
+          <span className="font-semibold text-lg">Metric 3.5.2</span>
           <div className="flex justify-center items-center text-white w-28 text-center bg-gray-400 px-4 py-1 shadow-sm text-xs rounded-2xl">
             <span>Not Started</span>
           </div>
@@ -33,8 +33,8 @@ export default function Metric_3_5_1() {
         </div>
 
         <span>
-          Number of Collaborative activities for research, Faculty exchange,
-          Student exchange/ internship per year
+          Number of functional MoUs with institutions, other universities,
+          industries, corporate houses etc. during the last five years
         </span>
 
         {/* <span className="text-red-500 text-sm">
@@ -140,9 +140,10 @@ export default function Metric_3_5_1() {
 
                   <tr className="text-sm">
                     <td className="p-4 border border-gray-400">
-                      3.5.1.1:Number of Collaborative activities for research,
-                      Faculty exchange, Student exchange/ internship year wise
-                      during the last five years
+                      3.5.2.1: Number of functional MoUs with Institutions of
+                      national, international importance, other universities,
+                      industries, corporate houses etc. year wise during the
+                      last five years
                     </td>
                     <td className="p-4 border border-gray-400">
                       <InputTag
@@ -188,11 +189,11 @@ export default function Metric_3_5_1() {
                 <div className="flex text-sm gap-4 justify-start items-center">
                   <DocumentArrowDownIcon className="h-6 w-6" />
                   <a
-                    href="./templates/3.5.1 Template.xlsx"
+                    href="./templates/3.5.2 Template.xlsx"
                     className="text-blue-500 underline"
                     download
                   >
-                    3.5.1 Template
+                    3.5.2 Template
                   </a>
                 </div>
               </div>
@@ -206,7 +207,8 @@ export default function Metric_3_5_1() {
               <div className="flex flex-col my-2 text-sm">
                 <div className="flex flex-row">
                   <div className="p-6 w-1/2 border border-gray-400 ">
-                    e-copies of related Document
+                    e-Copies of the MoUs with institution./ industry/ corporate
+                    houses
                   </div>
                   <div className="p-6 w-1/2 border border-gray-400 "></div>
                 </div>
@@ -214,6 +216,15 @@ export default function Metric_3_5_1() {
                 <div className="flex flex-row">
                   <div className="p-6 w-1/2 border border-gray-400 ">
                     Any additional information
+                  </div>
+                  <div className="p-6 w-1/2 border border-gray-400 "></div>
+                </div>
+
+                <div className="flex flex-row">
+                  <div className="p-6 w-1/2 border border-gray-400 ">
+                    Details of functional MoUs with institutions of national,
+                    international importance, other universities etc during the
+                    last five years
                   </div>
                   <div className="p-6 w-1/2 border border-gray-400 "></div>
                 </div>
@@ -265,9 +276,10 @@ export default function Metric_3_5_1() {
                 </tr>
                 <tr className="text-sm">
                   <td className="p-4 border border-gray-400">
-                    3.5.1.1:Number of Collaborative activities for research,
-                    Faculty exchange, Student exchange/ internship year wise
-                    during the last five years
+                    3.5.2.1: Number of functional MoUs with Institutions of
+                    national, international importance, other universities,
+                    industries, corporate houses etc. year wise during the last
+                    five years
                   </td>
                   <td className="p-4 border border-gray-400">
                     <InputTag name="response2" placeholder="Response" />
@@ -300,17 +312,15 @@ export default function Metric_3_5_1() {
             />
 
             <span className=" mt-2">
-              Data Requirements for last five years: (As per Data Template)
+              Data Requirement for last five years : (As per Data Template)
             </span>
             <ul className="list-decimal text-sm text-gray-700 space-y-5 pl-6">
-              <li>Title of the Collaborative activity</li>
-              <li>
-                Name of the partnering institution /industry/research lab with
-                contact details
-              </li>
-              <li>Year of commencement</li>
-              <li>Duration (From-To)</li>
-              <li>Nature of Collaborative activity</li>
+              <li>Organization with which MoU is signed</li>
+              <li>Name of the institution/industry/corporate house</li>
+              <li>Year of signing MoU</li>
+              <li>Duration</li>
+              <li>List the actual activities under each MoU</li>
+              <li>Number of students/teachers participating under MoUs</li>
             </ul>
 
             <div className="mt-2">
@@ -319,11 +329,11 @@ export default function Metric_3_5_1() {
                 <div className="flex text-sm gap-4 justify-start items-center">
                   <DocumentArrowDownIcon className="h-6 w-6" />
                   <a
-                    href="./templates/3.5.1 Template.xlsx"
+                    href="./templates/3.5.2 Template.xlsx"
                     className="text-blue-500 underline"
                     download
                   >
-                    3.5.1 Template
+                    3.5.2 Template
                   </a>
                 </div>
                 <InputTag type="file" name="file-data" />
@@ -342,7 +352,8 @@ export default function Metric_3_5_1() {
               <div className="flex flex-row">
                 <div className="flex justify-between items-center p-6 w-[66.66%] border border-gray-400 ">
                   <span className="text-sm w-[66.6%]">
-                    e-copies of related Document
+                    e-Copies of the MoUs with institution./ industry/ corporate
+                    houses
                   </span>
                   <button className="bg-indigo-500 text-sm hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-900 text-white px-5 py-2 rounded-md transition-all duration-150">
                     Merge PDF Files
@@ -357,6 +368,22 @@ export default function Metric_3_5_1() {
                 <div className="flex justify-between items-center p-6 w-[66.66%] border border-gray-400 ">
                   <span className="text-sm w-[66.66%]">
                     Any additional information
+                  </span>
+                  <button className="bg-indigo-500 text-sm hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-900 text-white px-5 py-2 rounded-md transition-all duration-150">
+                    Merge PDF Files
+                  </button>
+                </div>
+                <div className="p-6 w-1/3 border border-gray-400 ">
+                  <InputTag type="file" name="file2" />
+                </div>
+              </div>
+
+              <div className="flex flex-row">
+                <div className="flex justify-between items-center p-6 w-[66.66%] border border-gray-400 ">
+                  <span className="text-sm w-[66.66%]">
+                    Details of functional MoUs with institutions of national,
+                    international importance, other universities etc during the
+                    last five years
                   </span>
                   <button className="bg-indigo-500 text-sm hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-900 text-white px-5 py-2 rounded-md transition-all duration-150">
                     Merge PDF Files
