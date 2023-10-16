@@ -55,6 +55,7 @@ const Metric_5_1_5 = React.lazy(() => import("./sub-pages/Metric_5_1_5"));
 const Metric_5_2_1 = React.lazy(() => import("./sub-pages/Metric_5_2_1"));
 const Metric_5_2_2 = React.lazy(() => import("./sub-pages/Metric_5_2_2"));
 const Metric_5_2_3 = React.lazy(() => import("./sub-pages/Metric_5_2_3"));
+const Metric_5_3_1 = React.lazy(() => import("./sub-pages/Metric_5_3_1"));
 
 const StyledTreeItem = styled(TreeItem)(({ rootnode }) => {
   const borderColor = "#c7c7c7";
@@ -331,6 +332,9 @@ export default function FolderTreeSidebar(props) {
               </ShowTreeComponent>
               <ShowTreeComponent activeTree={activeTree} selectedTree="71">
                 <Metric_5_2_3 />
+              </ShowTreeComponent>
+              <ShowTreeComponent activeTree={activeTree} selectedTree="73">
+                <Metric_5_3_1 />
               </ShowTreeComponent>
             </React.Suspense>
           </Box>
