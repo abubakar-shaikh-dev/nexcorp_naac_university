@@ -365,11 +365,11 @@ export default function Metric_6_3_2() {
                 <div className="flex text-sm gap-4 justify-start items-center">
                   <DocumentArrowDownIcon className="h-6 w-6" />
                   <a
-                    href="./templates/3.1.3 Template.xlsx"
+                    href="./templates/6.3.2 Template.xlsx"
                     className="text-blue-500 underline"
                     download
                   >
-                    3.1.3 Template
+                    6.3.2 Template
                   </a>
                 </div>
                 <InputTag type="file" name="file-data" />
