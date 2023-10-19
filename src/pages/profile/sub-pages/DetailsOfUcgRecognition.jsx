@@ -90,20 +90,32 @@ export default function ForCommunicaton() {
 
                   <div className="ml-4 my-6 flex flex-col gap-3">
                     <SelectTag
-                      name="under-section"
-                      label="Under Section"
+                      name="type-of-colleges"
+                      label="Type of Colleges"
                       data={[
-                        { id: 0, value: "2 (f)" },
-                        { id: 1, value: "12 (B)" }
+                        { id: 0, value: "Education/Teachers Training" },
+                        {
+                          id: 1,
+                          value:
+                            "Business administration/ Commerce/ Management/ Finance",
+                        },
+                        {
+                          id: 2,
+                          value: "Universal/ Common to all Disciplines",
+                        },
                       ]}
                     />
-                    <InputTag type="date" name="date" label="Date" />
+                    <InputTag type="text" name="permenent" label="Permenent" />
                     <InputTag
-                      type="text"
-                      name="remarks"
-                      label="Remarks (If Any)"
+                      type="number"
+                      name="temporary"
+                      label="Temporary"
                     />
-                    
+                    <InputTag
+                      type="number"
+                      name="total"
+                      label="Total"
+                    />
                   </div>
 
                   <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
@@ -129,7 +141,6 @@ export default function ForCommunicaton() {
         </Dialog>
       </Transition.Root>
       {/* ADD MODAL END  */}
-      
 
       <div className="flex justify-between items-end w-full">
         <div>
@@ -165,21 +176,26 @@ export default function ForCommunicaton() {
                         scope="col"
                         className="py-3.5 pl-4 pr-4 text-left text-sm font-semibold text-gray-900 sm:pl-6"
                       >
-                        Under Section
+                        Type of Colleges
                       </th>
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
                       >
-                       Date, Month & Year
+                        Permanent
                       </th>
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
                       >
-                        Remarks
+                        Temporary
                       </th>
-                      
+                      <th
+                        scope="col"
+                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      >
+                        Total
+                      </th>
 
                       <th
                         scope="col"
@@ -199,11 +215,13 @@ export default function ForCommunicaton() {
                           {person.name}
                         </td>
 
-
                         <td className="whitespace-nowrap p-4 text-sm text-gray-500">
                           {person.title}
                         </td>
-                        
+                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
+                          {person.title}
+                        </td>
+
                         <td className="whitespace-nowrap p-4 text-sm text-gray-500">
                           {person.title}
                         </td>
