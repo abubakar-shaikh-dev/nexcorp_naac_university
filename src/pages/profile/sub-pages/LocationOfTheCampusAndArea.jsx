@@ -2,9 +2,9 @@ import React, { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import {
   ExclamationTriangleIcon,
-  XMarkIcon,
   TrashIcon,
   PencilSquareIcon,
+  XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { ArrowRightIcon, PlusIcon } from "@heroicons/react/24/outline";
 import InputTag from "../../../components/InputTag";
@@ -32,17 +32,10 @@ const people = [
   // More people...
 ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
-export default function LocationOfTheCampusAndArea() {
+export default function PositionsInTheInstitution() {
   const [open, setOpen] = useState(false);
   return (
     <>
-
-
-
       {/* ADD MODAL START  */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={setOpen}>
@@ -91,32 +84,52 @@ export default function LocationOfTheCampusAndArea() {
                     </div>
                   </div>
 
-                  <div className="ml-4 my-6 flex flex-col gap-3">
-                    
-                    <SelectTag name='location' label='Location' data={[
-                        {id:0,value:'Urban'},
-                        {id:1,value:'Semi-Urban'},
-                        {id:2,value:'Rural'},
-                        {id:3,value:'Tribal'},
-                        {id:4,value:'Hill'}
-                    ]} />
+                  <div className="mx-2 my-6 flex flex-col gap-6">
+                    <SelectTag
+                      name="teaching-types"
+                      label="Teaching Types"
+                      data={[
+                        { id: 0, value: "Sanctioned" },
+                        { id: 1, value: "Recruited" },
+                        { id: 2, value: "Yet to Recruit" },
+                        { id: 3, value: "On Contract" },
+                      ]}
+                    />
 
                     <InputTag
-                      type="text"
-                      name="capmus-area"
-                      label="Campus Area in sq. mts"
+                      type="number"
+                      name="male"
+                      label="Male"
+                      min="0"
                     />
-                   
+
                     <InputTag
-                      type="text"
-                      name="built-up-area"
-                      label="Built up Area in sq. mts"
+                      type="number"
+                      name="female"
+                      label="Female"
+                      min="0"
                     />
+
+                    <InputTag
+                      type="number"
+                      name="others"
+                      label="Others"
+                      min="0"
+                    />
+
+                    <InputTag
+                      type="number"
+                      name="total"
+                      label="Total"
+                      min="0"
+                    />
+
                     
+
                     
                   </div>
 
-                  <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
+                  <div className="mt-5  mx-2 sm:mt-4 sm:flex sm:flex-row-reverse">
                     <button
                       type="button"
                       className="inline-flex w-full justify-center rounded-md border border-transparent bg-gray-800 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
@@ -140,12 +153,10 @@ export default function LocationOfTheCampusAndArea() {
       </Transition.Root>
       {/* ADD MODAL END  */}
 
-
-
       <div className="flex justify-between items-end w-full">
         <div>
           <span className="font-medium flex flex-col gap-3">
-          12. Location of the campus and area
+            12. Technical Staff
           </span>
 
           <span className="text-white w-28 text-center bg-gray-400 px-4 py-1 shadow-sm text-xs rounded-2xl">
@@ -176,22 +187,33 @@ export default function LocationOfTheCampusAndArea() {
                         scope="col"
                         className="py-3.5 pl-4 pr-4 text-left text-sm font-semibold text-gray-900 sm:pl-6"
                       >
-                        Location
+                        Non-Teaching Type
                       </th>
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
                       >
-                        Campus Area in sq. mts
+                        Male
                       </th>
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
                       >
-                        Built up Area in sq. mts.
+                       Female
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      >
+                        Others
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      >
+                       Total
                       </th>
                       
-
                       <th
                         scope="col"
                         className="py-3.5 pl-4 pr-4 text-left text-sm font-semibold text-gray-900 sm:pr-6"
@@ -206,18 +228,23 @@ export default function LocationOfTheCampusAndArea() {
                         key={person.email}
                         className="divide-x divide-gray-200"
                       >
-                        <td className="whitespace-nowrap py-4 pl-4 pr-4 text-sm font-medium text-gray-900 sm:pl-6">
-                          {person.name}
-                        </td>
-
-
-                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
-                          {person.title}
-                        </td>
                         
                         <td className="whitespace-nowrap p-4 text-sm text-gray-500">
-                          {person.title}
+                          {person.email}
                         </td>
+                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
+                          {person.email}
+                        </td>
+                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
+                          {person.email}
+                        </td>
+                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
+                          {person.email}
+                        </td>
+                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
+                          {person.email}
+                        </td>
+                        
                         <td className="flex gap-7 whitespace-nowrap py-4 pl-4 pr-4 text-sm text-gray-500 sm:pr-6">
                           <TrashIcon className="h-5 w-5  text-red-600 hover:text-red-900 cursor-pointer" />
                           <PencilSquareIcon className="h-5 w-5 text-indigo-600 hover:text-indigo-900 cursor-pointer" />
