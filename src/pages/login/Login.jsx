@@ -3,18 +3,17 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { LoginSchema } from "../../validations/Login.validation";
 
 export default function Login() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(LoginSchema()),
+  });
 
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-      } = useForm({
-        resolver: yupResolver(LoginSchema()),
-      });
-
-      const onSubmit = (data) => {
-        console.log(data);
-      }
+  const onSubmit = (data) => {
+    console.log(data);
+  };
 
   return (
     <>
@@ -41,7 +40,6 @@ export default function Login() {
                       <div className="mt-1">
                         <input
                           id="email"
-                          
                           type="email"
                           autoComplete="email"
                           className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-slate-500 focus:outline-none focus:ring-slate-500 sm:text-sm"
@@ -71,10 +69,10 @@ export default function Login() {
                           {...register("password")}
                         />
                         {errors.password && (
-                <span className="text-red-500 px-1 text-sm">
-                  {errors.password.message}
-                </span>
-              )}
+                          <span className="text-red-500 px-1 text-sm">
+                            {errors.password.message}
+                          </span>
+                        )}
                       </div>
                     </div>
 
