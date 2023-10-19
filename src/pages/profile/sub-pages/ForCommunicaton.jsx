@@ -34,10 +34,6 @@ const tableData = [
   // More people...
 ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function ForCommunicaton() {
   const [open, setOpen] = useState(false);
   return (
