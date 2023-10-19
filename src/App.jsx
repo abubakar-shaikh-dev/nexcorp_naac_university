@@ -1,10 +1,12 @@
 import React from "react";
 import { BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import "./custom.css"
+
 // Pages
 import ExecutiveSummary from "./pages/executive-summary/ExecutiveSummary";
 import QifQualitative from "./pages/qif-qualitative/QifQualitative";
 import QifQuantitative from "./pages/qif-quantitative/QifQuantitative";
+import Login from "./pages/login/Login"
 
 //Routes
 import ProfileRoutes from "./routes/ProfileRoutes";
@@ -16,6 +18,9 @@ export default function App() {
     <>
       <BrowserRouter>
         <Routes>
+          
+          <Route path="/login" element={<Login />} />
+
           <Route path="/" element={<Navigate to='/executive-summary'/>} />
           <Route path="/executive-summary" element={<ExecutiveSummary />} />
           <Route path="/profile/*" element={<ProfileRoutes />} />
