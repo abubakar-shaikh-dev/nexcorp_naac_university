@@ -1,29 +1,29 @@
 import React, { useState } from "react";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import SelectTag from "../../../components/SelectTag";
+import InputTag from "../../../components/InputTag";
 
 export default function TypeOfInstitution() {
   return (
     <>
-      <span className="font-medium">4. Type of Institution</span>
+      <span className="font-medium">4. Establishment Details</span>
       <span className="text-white w-28 text-center bg-gray-400 px-4 py-1 shadow-sm text-xs rounded-2xl">
         Not Started
       </span>
 
       <form className="flex flex-col gap-6">
 
-        <SelectTag name='gender' label='By Gender' data={[
-            { id: 0, value: "For Men" },
-            { id: 1, value: "For Women" },
-            { id: 2, value: "Co-Education" },
-        ]} />
+        <InputTag label="Establishment Date of Univertsity" name="establishment-date-of-university" type="date" />
 
-        <SelectTag name='shift' label='By Shift' data={[
-            { id: 0, value: "Regular" },
-            { id: 1, value: "Day" },
-            { id: 2, value: "Evening" },
-        ]} />
-
+        <SelectTag name='status-prior-to-establisment' label='Status Prior to Establishment, if Applicable' data={[
+            { id: 0, value: "Autonomous" },
+            { id: 1, value: "Constituent" },
+            { id: 2, value: "PG Center" },
+            { id: 3, value: "Other" },
+          ]} />
+        
+        <InputTag label="Establishment Date" name="establishment-date" type="date" />
+        
         <div className="flex gap-3 my-5">
           <button className="bg-indigo-500 text-sm  hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-900 text-white px-5 py-2 rounded-md transition-all duration-150">
             Save for Draft

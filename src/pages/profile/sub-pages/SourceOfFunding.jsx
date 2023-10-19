@@ -5,18 +5,16 @@ import SelectTag from "../../../components/SelectTag";
 export default function SourceOfFunding() {
   return (
     <>
-      <span className="font-medium">6. Source of Funding</span>
+      <span className="font-medium">6. University with Potential for Excellence</span>
       <span className="text-white w-28 text-center bg-gray-400 px-4 py-1 shadow-sm text-xs rounded-2xl">
         Not Started
       </span>
 
       <form className="flex flex-col gap-6">
 
-        <SelectTag name='source-of-funding' label='Source Of Funding' data={[
-            { id: 0, value: "Government" },
-            { id: 1, value: "Grant-In-Aid" },
-            { id: 2, value: "Self Financing" },
-            { id: 3, value: "Other" }
+        <SelectTag name='university-recognized' label='Is the University Recognized as a University with Potential for Excellence (UPE) by the UGC?' data={[
+            { id: 0, value: "Yes" },
+            { id: 1, value: "No" },
         ]} />
 
         <div className="flex gap-3 my-5">

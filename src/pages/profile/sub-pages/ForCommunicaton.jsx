@@ -15,8 +15,7 @@ const tableData = [
     id: "1",
     designation: "Principle",
     name: "Test Name",
-    telephone_o: "1234567890",
-    telephone_r: "1234567890",
+    telephone: "1234567890",
     mobile: "9087654321",
     fax: "123456732",
     email: "asd@fgh.com",
@@ -25,8 +24,7 @@ const tableData = [
     id: "2",
     designation: "Vice-Principle",
     name: "Test Name 2",
-    telephone_o: "1234567890",
-    telephone_r: "1234567890",
+    telephone: "1234567890",
     mobile: "9087654321",
     fax: "123456732",
     email: "asd2@fgh.com",
@@ -99,13 +97,8 @@ export default function ForCommunicaton() {
                     <InputTag type="text" name="name" label="Name" />
                     <InputTag
                       type="tel"
-                      name="telephone1"
-                      label="Telephone (O)"
-                    />
-                    <InputTag
-                      type="tel"
-                      name="telephone2"
-                      label="Telephone (R)"
+                      name="telephone"
+                      label="Telephone"
                     />
                     <InputTag type="tel" name="mobile" label="Mobile No" />
                     <InputTag type="text" name="fax" label="Fax No" />
@@ -139,7 +132,7 @@ export default function ForCommunicaton() {
       <div className="flex justify-between items-end w-full">
         <div>
           <span className="font-medium flex flex-col gap-3">
-            2. For Communication
+            2. Contacts for Communication
           </span>
 
           <span className="text-white w-28 text-center bg-gray-400 px-4 py-1 shadow-sm text-xs rounded-2xl">
@@ -182,14 +175,9 @@ export default function ForCommunicaton() {
                         scope="col"
                         className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
                       >
-                        Telephone (O)
+                        Telephone
                       </th>
-                      <th
-                        scope="col"
-                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
-                      >
-                        Telephone (R)
-                      </th>
+                      
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
@@ -228,10 +216,7 @@ export default function ForCommunicaton() {
                           {data.name}
                         </td>
                         <td className="whitespace-nowrap p-4 text-sm text-gray-500">
-                          {data.telephone_o}
-                        </td>
-                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
-                          {data.telephone_r}
+                          {data.telephone}
                         </td>
                         <td className="whitespace-nowrap p-4 text-sm text-gray-500">
                           {data.mobile}
