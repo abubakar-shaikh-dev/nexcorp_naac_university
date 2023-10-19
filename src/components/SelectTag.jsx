@@ -14,7 +14,8 @@ export default function SelectTag(props) {
           id={props.name}
           name={props.name}
           className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          defaultValue={"default"}
+          defaultValue={props.default ? props.default : "default"}
+          {...props}
         >
           <option disabled value="default">
             Select Option
