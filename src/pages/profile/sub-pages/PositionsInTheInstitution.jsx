@@ -86,82 +86,46 @@ export default function PositionsInTheInstitution() {
 
                   <div className="mx-2 my-6 flex flex-col gap-6">
                     <SelectTag
-                      name="positions"
-                      label="Positions"
+                      name="professor-type"
+                      label="professor-type"
                       data={[
-                        {
-                          id: 0,
-                          value:
-                            "Recruited [Sanctioned by the  UGC / University /  State Government]",
-                        },
-                        {
-                          id: 1,
-                          value:
-                            "Recruited [Sanctioned by the Management/ society or other authorized bodies]",
-                        },
-                        { id: 2, value: "Yet to Recruit" },
+                        { id: 0, value: "Emeritus Professor" },
+                        { id: 1, value: "Adjunct Professor" },
+                        { id: 2, value: "Visiting Professor" },
                       ]}
                     />
 
                     <InputTag
-                      type="text"
-                      name="professor-male"
-                      label="Professor Male"
+                      type="number"
+                      name="male"
+                      label="Male"
+                      min="0"
                     />
 
                     <InputTag
-                      type="text"
-                      name="professor-female"
-                      label="Professor Female"
+                      type="number"
+                      name="female"
+                      label="Female"
+                      min="0"
                     />
 
                     <InputTag
-                      type="text"
-                      name="associate-professor-male"
-                      label="Associate Professor Male"
+                      type="number"
+                      name="others"
+                      label="Others"
+                      min="0"
                     />
 
                     <InputTag
-                      type="text"
-                      name="associate-professor-female"
-                      label="Associate Professor Female"
+                      type="number"
+                      name="total"
+                      label="Total"
+                      min="0"
                     />
 
-                    <InputTag
-                      type="text"
-                      name="assistant-professor-male"
-                      label="Assistant Professor Male"
-                    />
+                    
 
-                    <InputTag
-                      type="text"
-                      name="assistant-professor-female"
-                      label="Assistant Professor Female"
-                    />
-
-                    <InputTag
-                      type="text"
-                      name="non-teaching-staff-male"
-                      label="Non-Teaching Staff Male"
-                    />
-
-                    <InputTag
-                      type="text"
-                      name="non-teaching-staff-female"
-                      label="Non-Teaching Staff Female"
-                    />
-
-                    <InputTag
-                      type="text"
-                      name="technical-staff-male"
-                      label="Technical Staff Male"
-                    />
-
-                    <InputTag
-                      type="text"
-                      name="technical-staff-female"
-                      label="Technical Staff Female"
-                    />
+                    
                   </div>
 
                   <div className="mt-5  mx-2 sm:mt-4 sm:flex sm:flex-row-reverse">
@@ -191,7 +155,7 @@ export default function PositionsInTheInstitution() {
       <div className="flex justify-between items-end w-full">
         <div>
           <span className="font-medium flex flex-col gap-3">
-            16. Number of teaching and non-teaching positions in the Institution
+            16. Distinguished Academicians Appointed
           </span>
 
           <span className="text-white w-28 text-center bg-gray-400 px-4 py-1 shadow-sm text-xs rounded-2xl">
@@ -222,69 +186,33 @@ export default function PositionsInTheInstitution() {
                         scope="col"
                         className="py-3.5 pl-4 pr-4 text-left text-sm font-semibold text-gray-900 sm:pl-6"
                       >
-                        Positions
+                        Professor Type
                       </th>
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
                       >
-                        Professor Male
+                        Male
                       </th>
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
                       >
-                        Professor Female
+                       Female
                       </th>
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
                       >
-                        Associate Professor Male
+                        Others
                       </th>
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
                       >
-                        Associate Professor Female
+                       Total
                       </th>
-                      <th
-                        scope="col"
-                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
-                      >
-                        Assistant Professor Male
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
-                      >
-                        Assistant Professor Female
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
-                      >
-                        Non-Teaching Staff Male
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
-                      >
-                        Non-Teaching Staff Female
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
-                      >
-                        Technical Staff Male
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
-                      >
-                        Technical Staff Female
-                      </th>
-
+                      
                       <th
                         scope="col"
                         className="py-3.5 pl-4 pr-4 text-left text-sm font-semibold text-gray-900 sm:pr-6"
@@ -299,12 +227,7 @@ export default function PositionsInTheInstitution() {
                         key={person.email}
                         className="divide-x divide-gray-200"
                       >
-                        <td className="whitespace-nowrap py-4 pl-4 pr-4 text-sm font-medium text-gray-900 sm:pl-6">
-                          {person.name}
-                        </td>
-                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
-                          {person.title}
-                        </td>
+                        
                         <td className="whitespace-nowrap p-4 text-sm text-gray-500">
                           {person.email}
                         </td>
@@ -320,18 +243,7 @@ export default function PositionsInTheInstitution() {
                         <td className="whitespace-nowrap p-4 text-sm text-gray-500">
                           {person.email}
                         </td>
-                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
-                          {person.email}
-                        </td>
-                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
-                          {person.email}
-                        </td>
-                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
-                          {person.email}
-                        </td>
-                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
-                          {person.email}
-                        </td>
+                        
                         <td className="flex gap-7 whitespace-nowrap py-4 pl-4 pr-4 text-sm text-gray-500 sm:pr-6">
                           <TrashIcon className="h-5 w-5  text-red-600 hover:text-red-900 cursor-pointer" />
                           <PencilSquareIcon className="h-5 w-5 text-indigo-600 hover:text-indigo-900 cursor-pointer" />

@@ -2,9 +2,9 @@ import React, { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import {
   ExclamationTriangleIcon,
-  XMarkIcon,
   TrashIcon,
   PencilSquareIcon,
+  XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { ArrowRightIcon, PlusIcon } from "@heroicons/react/24/outline";
 import InputTag from "../../../components/InputTag";
@@ -32,7 +32,7 @@ const people = [
   // More people...
 ];
 
-export default function ListOfDepartments() {
+export default function PositionsInTheInstitution() {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -84,27 +84,92 @@ export default function ListOfDepartments() {
                     </div>
                   </div>
 
-                  <div className="ml-4 my-6 flex flex-col gap-3">
-                    <InputTag
-                      type="text"
-                      name="faculty"
-                      label="Faculty (eg. Science, Arts, Commerce, Any Other Specify )"
+                  <div className="mx-2 my-6 flex flex-col gap-6">
+                    <SelectTag
+                      name="positions"
+                      label="Positions"
+                      data={[
+                        {id: 0, value: "D.sc/D.Litt" },
+                        {id: 1, value: "Ph.D" },
+                        { id: 2, value: "M.Phil" },
+                        { id: 3, value: "PG" },
+                      ]}
                     />
 
                     <InputTag
-                      type="text"
-                      name="departments"
-                      label="Departments (eg. Physics, Botany, History etc.)"
+                      type="number"
+                      name="professor-male"
+                      label="Professor Male"
+                      min="0"
                     />
 
-                    <InputTag type="text" name="UG" label="UG" />
+                    <InputTag
+                      type="number"
+                      name="professor-female"
+                      label="Professor Female"
+                      min="0"
+                    />
 
-                    <InputTag type="text" name="PG" label="PG" />
+                    <InputTag
+                      type="number"
+                      name="professor-others"
+                      label="Professor Others"
+                      min="0"
+                    />
 
-                    <InputTag type="text" name="research" label="Research" />
+                    <InputTag
+                      type="number"
+                      name="associate-male"
+                      label="Associate Male"
+                      min="0"
+                    />
+
+                    <InputTag
+                      type="number"
+                      name="associate-female"
+                      label="Associate Female"
+                      min="0"
+                    />
+
+                    <InputTag
+                      type="number"
+                      name="associate-others"
+                      label="Associate Others"
+                      min="0"
+                    />
+
+                    <InputTag
+                      type="number"
+                      name="assistant-male"
+                      label="Assistant Male"
+                      min="0"
+                    />
+
+                    <InputTag
+                      type="number"
+                      name="assistant-female"
+                      label="Assistant Female"
+                      min="0"
+                    />
+
+                    <InputTag
+                      type="number"
+                      name="assistant-others"
+                      label="Assistant Others"
+                      min="0"
+                    />
+
+                    <InputTag
+                      type="number"
+                      name="total"
+                      label="Total"
+                      min="0"
+                    />
+
+                   
                   </div>
 
-                  <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
+                  <div className="mt-5  mx-2 sm:mt-4 sm:flex sm:flex-row-reverse">
                     <button
                       type="button"
                       className="inline-flex w-full justify-center rounded-md border border-transparent bg-gray-800 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
@@ -131,12 +196,7 @@ export default function ListOfDepartments() {
       <div className="flex justify-between items-end w-full">
         <div>
           <span className="font-medium flex flex-col gap-3">
-            15. List the departments: (respond if applicable only and do not list
-            facilities like Library, Physical Education as departments, unless
-            they are also offering academic degree awarding programmes.
-            Similarly, do not list the departments offering common compulsory
-            subjects for all the programme like English, regional languages
-            etc.)
+            15. Part Time Teachers
           </span>
 
           <span className="text-white w-28 text-center bg-gray-400 px-4 py-1 shadow-sm text-xs rounded-2xl">
@@ -167,31 +227,67 @@ export default function ListOfDepartments() {
                         scope="col"
                         className="py-3.5 pl-4 pr-4 text-left text-sm font-semibold text-gray-900 sm:pl-6"
                       >
-                        Faculty
+                        Highest Qualification
                       </th>
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
                       >
-                        Departments
+                        Professor Male
                       </th>
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
                       >
-                        UG
+                        Professor Female
                       </th>
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
                       >
-                        PG
+                        Professor Others
                       </th>
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
                       >
-                        Research
+                        Associate Male
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      >
+                        Associate Female
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      >
+                        Associate Others
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      >
+                        Assistant Male
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      >
+                        Assistant Female
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      >
+                        Assistant Others
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      >
+                        Total
                       </th>
 
                       <th
@@ -213,6 +309,24 @@ export default function ListOfDepartments() {
                         </td>
                         <td className="whitespace-nowrap p-4 text-sm text-gray-500">
                           {person.title}
+                        </td>
+                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
+                          {person.email}
+                        </td>
+                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
+                          {person.email}
+                        </td>
+                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
+                          {person.email}
+                        </td>
+                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
+                          {person.email}
+                        </td>
+                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
+                          {person.email}
+                        </td>
+                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
+                          {person.email}
                         </td>
                         <td className="whitespace-nowrap p-4 text-sm text-gray-500">
                           {person.email}

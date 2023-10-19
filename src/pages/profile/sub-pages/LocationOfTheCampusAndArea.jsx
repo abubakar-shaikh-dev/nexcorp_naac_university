@@ -96,12 +96,7 @@ export default function PositionsInTheInstitution() {
                       ]}
                     />
 
-                    <InputTag
-                      type="number"
-                      name="male"
-                      label="Male"
-                      min="0"
-                    />
+                    <InputTag type="number" name="male" label="Male" min="0" />
 
                     <InputTag
                       type="number"
@@ -123,10 +118,6 @@ export default function PositionsInTheInstitution() {
                       label="Total"
                       min="0"
                     />
-
-                    
-
-                    
                   </div>
 
                   <div className="mt-5  mx-2 sm:mt-4 sm:flex sm:flex-row-reverse">
@@ -187,7 +178,7 @@ export default function PositionsInTheInstitution() {
                         scope="col"
                         className="py-3.5 pl-4 pr-4 text-left text-sm font-semibold text-gray-900 sm:pl-6"
                       >
-                        Non-Teaching Type
+                        Teaching Type
                       </th>
                       <th
                         scope="col"
@@ -199,7 +190,7 @@ export default function PositionsInTheInstitution() {
                         scope="col"
                         className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
                       >
-                       Female
+                        Female
                       </th>
                       <th
                         scope="col"
@@ -211,9 +202,9 @@ export default function PositionsInTheInstitution() {
                         scope="col"
                         className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
                       >
-                       Total
+                        Total
                       </th>
-                      
+
                       <th
                         scope="col"
                         className="py-3.5 pl-4 pr-4 text-left text-sm font-semibold text-gray-900 sm:pr-6"
@@ -228,7 +219,6 @@ export default function PositionsInTheInstitution() {
                         key={person.email}
                         className="divide-x divide-gray-200"
                       >
-                        
                         <td className="whitespace-nowrap p-4 text-sm text-gray-500">
                           {person.email}
                         </td>
@@ -244,7 +234,7 @@ export default function PositionsInTheInstitution() {
                         <td className="whitespace-nowrap p-4 text-sm text-gray-500">
                           {person.email}
                         </td>
-                        
+
                         <td className="flex gap-7 whitespace-nowrap py-4 pl-4 pr-4 text-sm text-gray-500 sm:pr-6">
                           <TrashIcon className="h-5 w-5  text-red-600 hover:text-red-900 cursor-pointer" />
                           <PencilSquareIcon className="h-5 w-5 text-indigo-600 hover:text-indigo-900 cursor-pointer" />

@@ -85,64 +85,32 @@ export default function QualificationsOfTheTeachingStaff() {
                   </div>
 
                   <div className="mx-2 my-6 flex flex-col gap-6">
-                    <SelectTag
-                      name="type-of-teachers"
-                      label="Type of Teachers"
-                      data={[
-                        { id: 0, value: "Permanent Teachers" },
-                        { id: 1, value: "Temporary Teachers" },
-                        { id: 2, value: "Part-Time Teachers" },
-                      ]}
-                    />
+                    
 
-                    <SelectTag
-                      name="highest-qualification"
-                      label="Highest Qualification"
-                      data={[
-                        { id: 0, value: "D.Sc/D.Litt" },
-                        { id: 1, value: "Ph.D" },
-                        { id: 2, value: "M.Phill" },
-                        { id: 3, value: "PG" },
-                      ]}
+                    <InputTag
+                      type="number"
+                      name="sl-no"
+                      label="Serial Number"
                     />
 
                     <InputTag
                       type="text"
-                      name="professor-male"
-                      label="Professor Male"
+                      name="name-of-the-department"
+                      label="Name of The Department"
                     />
 
                     <InputTag
                       type="text"
-                      name="professor-female"
-                      label="Professor Female"
+                      name="name-of-the-chair"
+                      label="Name of the Chair"
                     />
 
                     <InputTag
                       type="text"
-                      name="associate-professor-male"
-                      label="Associate Professor Male"
+                      name="name-of-the-sponser-organization-or-agency"
+                      label="Name of the Sponsor Organisation/Agency"
                     />
 
-                    <InputTag
-                      type="text"
-                      name="associate-professor-female"
-                      label="Associate Professor Female"
-                    />
-
-                    <InputTag
-                      type="text"
-                      name="assistant-professor-male"
-                      label="Assistant Professor Male"
-                    />
-
-                    <InputTag
-                      type="text"
-                      name="assistant-professor-female"
-                      label="Assistant Professor Female"
-                    />
-
-                    <InputTag type="text" name="total" label="Total" />
                   </div>
 
                   <div className="mt-5  mx-2 sm:mt-4 sm:flex sm:flex-row-reverse">
@@ -172,7 +140,7 @@ export default function QualificationsOfTheTeachingStaff() {
       <div className="flex justify-between items-end w-full">
         <div>
           <span className="font-medium flex flex-col gap-3">
-            17. Qualifications of the teaching staff
+            17. Chairs Instituted by the University
           </span>
 
           <span className="text-white w-28 text-center bg-gray-400 px-4 py-1 shadow-sm text-xs rounded-2xl">
@@ -203,55 +171,25 @@ export default function QualificationsOfTheTeachingStaff() {
                         scope="col"
                         className="py-3.5 pl-4 pr-4 text-left text-sm font-semibold text-gray-900 sm:pl-6"
                       >
-                        Type of Teachers
+                        Sl.No
                       </th>
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
                       >
-                        Highest Qualification
+                        Name of the Department
                       </th>
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
                       >
-                        Professor Male
+                        Name of the Chair
                       </th>
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
                       >
-                        Professor Female
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
-                      >
-                        Associate Professor Male
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
-                      >
-                        Associate Professor Female
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
-                      >
-                        Assistant Professor Male
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
-                      >
-                        Assistant Professor Female
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900"
-                      >
-                        Total
+                        Name of the Sponsor Organisation/Agency
                       </th>
 
                       <th
@@ -273,21 +211,6 @@ export default function QualificationsOfTheTeachingStaff() {
                         </td>
                         <td className="whitespace-nowrap p-4 text-sm text-gray-500">
                           {person.title}
-                        </td>
-                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
-                          {person.email}
-                        </td>
-                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
-                          {person.email}
-                        </td>
-                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
-                          {person.email}
-                        </td>
-                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
-                          {person.email}
-                        </td>
-                        <td className="whitespace-nowrap p-4 text-sm text-gray-500">
-                          {person.email}
                         </td>
                         <td className="whitespace-nowrap p-4 text-sm text-gray-500">
                           {person.email}
